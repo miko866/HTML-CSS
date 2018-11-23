@@ -1,0 +1,148 @@
+// ------------- BG-APPLE ---------------
+
+.bg-apple {
+    position: relative;
+    top: -7em;
+  
+    img {
+      @media screen and (min-width: 37.500em) {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+  
+    h1 {
+      padding: 1em .5em;
+      text-align: justify;
+      font-size: 170%;
+      color: $color-bg;
+    }
+  
+    span {
+      color: $color-marked;
+    }
+  
+    // FOR PC
+    @media screen and (min-width: 65em) {
+      position: absolute;
+      height: auto;
+      width: 50%;
+      left: 50%;
+      top: 6rem;
+  
+      img {
+        max-width: 58%;
+      }
+  
+      .bg-apple--text {
+        max-width: 80%;
+      }
+  
+      h1 {
+        padding: 1rem 1rem;
+        font-size: 135%;
+      }
+    }
+  }
+  
+  // KONTAKT-BTN
+  .btn-kontakt {
+  
+    padding-top: 1em;
+  
+    a {
+      position: absolute;
+      top: 106%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0.625em 1.250em;
+      border: 0.125em solid $color-base-2;
+      font-family: $font-family-title;
+      text-transform: uppercase;
+      letter-spacing: 0.125em;
+      color: $color-marked;
+      transition: .5s;
+      font-size: 120%;
+      cursor: pointer;
+    }
+    a span::before,
+    a span::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1.875em;
+        height: 1.875em;
+        box-sizing: border-box;
+        transition: .5s;
+        cursor: pointer;
+    }
+    a span::before {
+        border-bottom: 0.125em solid $color-base-2;
+        border-left: 0.125em solid $color-base-2;
+        transform: rotate(45deg);
+        top: 0.250em;
+        left: 0.313em;
+    }
+    a:hover span::before {
+        left: -1.563em;
+        transform: rotate(-135deg);
+        animation: animateBefore .5s linear infinite;
+    }
+  
+    a span::after {
+        border-top: 0.125em solid $color-base-2;
+        border-right: 0.125em solid $color-base-2;
+        transform: rotate(45deg);
+        top: 0.250em;
+        right: 0.313em;
+    }
+    a:hover span::after {
+        right: -1.563em;
+        transform: rotate(-135deg);
+        animation: animateAfter .5s linear infinite;
+    }
+  
+    a:hover {
+        border-radius: 1.250em;
+        color: $color-hover;
+    }
+  
+    @keyframes animateBefore {
+        0% 
+        {
+                left: -1.563em;
+        }
+        50% 
+        {
+                left: -1.250em;
+        }
+        100%
+        {
+                left: -1.563em;
+        }
+    }
+  
+    @keyframes animateAfter {
+        0% 
+        {
+                right: -1.563em;
+        }
+        50% 
+        {
+                right: -1.250em;
+        }
+        100%
+        {
+                right: -1.563em;
+        }
+    }
+  
+    // FOR PC
+    @media screen and (min-width: 65em) {
+      position: relative;
+      top: 1rem;
+    }
+  }
+  // End KONTAKT

@@ -1,0 +1,698 @@
+// Variables
+
+$color-text:      white;
+$color-text-2:    black;
+$color-title:     #F4DDB5;
+$color-title-2:   #7F6638;
+$color-menu:      #181818;
+$color-text-shadow: #232323;
+
+$font-size:     100%;
+
+$font-family-title:      'Roboto Slab', serif;
+$font-family-unter-title:'Changa', sans-serif;
+$font-family-text:       'Open Sans', sans-serif;
+
+
+.main-title {
+    text-align: center;
+    color: $color-title;
+    text-transform: uppercase;
+    font-size: 280%;
+    padding: .5em 0;
+    font-family: $font-family-unter-title;
+}
+.main-title--size {
+    font-size: 180%;
+    padding: 0 0 .5em 0;
+}
+
+.main-text {
+    text-align: center;
+    padding: .7em .5em;
+    color: white;
+    text-shadow: 1px 1px 10px rgba($color-text-shadow, .9);
+
+    p {
+        padding: .7em 0;
+        line-height: 1.7em;
+        font-size: 150%;
+    }
+}
+#faq .main-text {
+    text-align: start;
+}
+
+.main-text--other p {
+    color: $color-text-2;
+    text-shadow: none;
+    text-align: start;
+}
+// GENERAL 
+
+// Only for Program Websites - show Elements Container  
+/* * {
+    outline: 3px solid black; 
+} */
+
+// For Microsoft Devices - Resposive 
+  @-ms-viewport {
+    width: device-width;
+  }
+  
+  html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    // Okamžitá odozva pre mobilné zariadenia na TOUCH, zrušenie oneskorenia 300/ms 
+    -ms-touch-action: manipulation; /* IE10  */
+    touch-action: manipulation;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  html, body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+    font: {
+        size:   $font-size;
+        family: $font-family-text;
+    }
+    
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    text-rendering: optimizelegibility;
+
+    @media screen and (min-width: 600px) {
+        font-size: 110%;
+      }
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    // font-size: 0;  medzeri medzi obrazkamy odstrány
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+  
+  p {
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border: 0;
+  }
+  
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 .3rem 0 .3rem;
+  }
+  
+  // add color for text markieren 
+  ::selection {
+    background: #ddd;
+    color: white;
+    text-shadow: none;
+  }
+  ::-moz-selection {
+    background: #ddd;
+    color: white;
+    text-shadow: none;
+  }
+  
+  // CLEAR FIX 
+  .clear::before,
+  .clear::after {
+    content: " ";
+    display: table;
+  }
+  .clear:after {
+    clear: both;
+  }
+
+
+main {
+    background-color: #adadad; 
+}
+//   Header
+#site-header {
+    background: url('../img/nal-coaching-header-bg.jpg') no-repeat;
+    background: {
+        size: cover;
+        attachment: scroll;
+        position: center center;
+    }
+
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 3em;
+
+    @media screen and (min-width: 600px) {
+        height: auto;
+      }
+
+    @media screen and (min-width: 900px) {
+    background-attachment: fixed;
+    }
+
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1){
+        background-attachment: scroll;
+    }
+}
+
+.content {
+    padding-top: 2em;
+
+    ul  {
+        display: inline;
+        line-height: 3.75rem;
+    }
+}
+
+
+.icons {
+
+    li {
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        padding-left: 1em;
+    }
+
+    .svg {
+        transition: .3s all ease-in-out;
+    }
+
+    .svg #facebook,
+    .svg #linkedin,
+    .svg #email {
+        fill: $color-text;
+    }
+
+    .svg:hover path,
+    .svg:focus path {
+        fill: $color-title;
+    } 
+}
+
+.icons--email {
+    vertical-align: sub;
+}
+
+// Hover Touch on Mobile Devices 
+html.can-touch .icons .svg:hover path {
+    fill: $color-title; // disable hover effect on touch devices
+}
+
+
+// Logo
+
+.logo {
+    text-align: center;
+    padding: {
+        top: 4em;
+        right: 0;
+        bottom: 2em;
+        left: 0;
+    }
+
+}
+
+
+// Menu-Icon
+
+.menu-icon {
+    height: 1.5625rem;
+    width: 3.125rem;
+    position: absolute;
+    top: 3.125rem;
+    right: 1.125rem;
+}
+
+.menu-icon:hover {
+    cursor: pointer;
+}
+
+.menu-line {
+    height: .25rem; // 4px
+    width: 3.125rem;
+    background-color: $color-text;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s all ease-in-out;
+}
+.menu-icon:hover .menu-line {
+    width: 2.5rem;
+}
+
+.menu-line::before {
+    content: '';
+    height: .25rem;
+    width: 2.5rem;
+    background-color: $color-text;
+    position: absolute;
+    margin-top: 0.625rem;
+    transition: .3s all ease-in-out;
+}
+.menu-icon:hover .menu-line::before {
+    width: 3.125rem;
+}
+
+.menu-line::after {
+    content: '';
+    height: .25rem;
+    width: 2.5rem;
+    background-color: $color-text;
+    position: absolute;
+    margin-top: -0.625rem;
+    transition: .3s all ease-in-out;
+}
+.menu-icon:hover .menu-line::after {
+    width: 3.125rem;
+}
+
+// Hover Touch on Mobile Devices 
+html.can-touch .menu-icon:hover .menu-line{
+    width: 2.5rem; // disable hover effect on touch devices 
+}
+html.can-touch .menu-icon:hover .menu-line::before{
+    width: 3.125rem; // disable hover effect on touch devices 
+}
+html.can-touch .menu-icon:hover .menu-line::after{
+    width: 3.125rem; // disable hover effect on touch devices 
+}
+
+// Menu Menu
+
+.main-menu {
+    height: 100vh;
+    width: 300px;
+    background-color: rgba($color-menu, .9);
+    clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+    position: fixed;
+    top: 0;
+    left: -300px;
+    overflow: auto;
+    transition: .5s all ease-in-out;
+
+    ul {
+        font-family: $font-family-unter-title;
+        color: white;
+        text-align: center;
+    }
+
+    li {
+        margin: 16px;
+
+        a {
+            font-size: 130%;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $color-title;
+            }
+        }
+         // Hover Touch on Mobile Devices 
+        html.can-touch a:hover {
+            color: $color-title; // disable hover effect on touch devices 
+        }
+    }
+
+    ul li:hover {
+        cursor: pointer;
+    }
+
+    .line {
+        height: 2px;
+        width: 150px;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        transition: .3s all ease-in-out;
+    }
+
+    ul li:hover .line {
+        width: 180px;
+    }
+    // Hover Touch on Mobile Devices 
+    html.can-touch ul li:hover .line {
+        width: 180px; // disable hover effect on touch devices 
+    }
+
+    .main-menu--logo {
+        display: none;
+    }
+
+    .close {
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 1.6em;
+        cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+        cursor: pointer;
+    }
+
+    .close:hover path,
+    .close:focus path {
+        fill: $color-title;
+    } 
+
+} 
+
+
+// Main-Title
+
+.title {
+    text-transform: uppercase;
+    font-family: $font-family-title;
+    color: $color-text;
+    text-align: center;
+    text-shadow: 1px 1px 6px rgba($color-text, .9);
+    font-size: 130%;
+    padding-bottom: 3em;
+
+    @media screen and (min-width: 600px) {
+        font-size: 180%;
+      }
+
+    @media screen and (min-width: 800px) {
+        font-size: 200%;
+    }
+}
+
+.site-header--text {
+    text-align: center;
+    color: $color-text;
+    background: rgba($color-text-2, .3);
+    padding: 1em;
+    font-size: 130%;
+    line-height: 1.5em;
+}
+
+
+// NAL - BIO
+#bio {
+    background: url('../img/Nal-Gunter-Nalcoaching.jpg') no-repeat;
+    background: {
+        size: contain;
+        attachment: scroll;
+        position: center center;
+    }
+
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 5em;
+
+    @media screen and (min-width: 600px) {
+        height: 100%;
+      }
+
+    @media screen and (min-width: 900px) {
+    background-attachment: fixed;
+    }
+
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1){
+        background-attachment: scroll;
+    }
+}
+
+#coaching {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.40), 
+        rgba(255, 255, 255, 0.40)
+      ),
+      url('../img/coaching-nalcoaching.jpg') no-repeat;
+    background: {
+        size: cover;
+        attachment: scroll;
+        position: center center;
+    }
+
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 5em;
+
+    @media screen and (min-width: 600px) {
+        height: 100%;
+      }
+
+    @media screen and (min-width: 900px) {
+    background-attachment: fixed;
+    }
+
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1){
+        background-attachment: scroll;
+    }
+}
+
+#faq {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+     ),
+      url('../img/faq-nalcoaching.jpg') no-repeat;
+    background: {
+        size: cover;
+        attachment: scroll;
+        position: center center;
+    }
+
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 5em;
+
+    @media screen and (min-width: 600px) {
+        height: 100%;
+      }
+
+    @media screen and (min-width: 900px) {
+    background-attachment: fixed;
+    }
+
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1){
+        background-attachment: scroll;
+    }
+}
+
+#preise {
+    h1 {
+        color: $color-title-2;
+    }
+    span {
+        text-decoration: underline;
+    }
+
+    background-color: white;
+}
+
+.preise-lh p {
+    padding: 0 0 .3em 0;
+}
+
+.main-title--color {
+    text-shadow: none;
+    color: $color-title-2;
+}
+
+#kontakt {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.3), 
+        rgba(255, 255, 255, 0.3)
+     ),
+      url('../img/nalcoaching-kontakt.jpg') no-repeat;
+    background: {
+        size: cover;
+        attachment: scroll;
+        position: center center;
+    }
+
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 5em;
+
+    .main-title {
+        color: $color-text-2;
+    }
+
+    .contact-data {
+        padding-top: 2em;
+
+       p {
+           text-align: center;
+           
+           span {
+               text-decoration: underline;
+           }
+       }
+
+       a {
+           transition: .6s all ease-in-out;
+       }
+
+       a:hover,
+       a:focus {
+           color: $color-title;
+       }
+    }
+
+    @media screen and (min-width: 600px) {
+        height: 100%;
+      }
+
+    @media screen and (min-width: 900px) {
+    background-attachment: fixed;
+    }
+
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1){
+        background-attachment: scroll;
+    }
+    
+}
+
+address {
+    font-size: 130%;
+    line-height: 1.5em;
+    text-shadow: 1px 1px 10px rgba($color-text-shadow, .9);
+
+    img {
+        max-width: 8%;
+
+    }
+}
+
+footer .content {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.icons--footer {
+
+    .svg {
+        max-width: 70%;
+    }
+
+}
+
+footer .svg #facebook,
+footer .svg #linkedin {
+    background-color: $color-text-2;
+}
+
+
+.copywritting {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+
+
+
+/*
+* JQuery
+*/
+
+a.back-to-top {
+	display: none;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+    background: #27AE61 url("../img/up-arrow.svg") no-repeat center center;
+    background-size: cover;
+    border-radius: 30px;
+    opacity: .5;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    opacity: 1;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    transition: opacity .4s;
+}
+
+
+
+
+
+
+
+
+
+    
+
+
+  
+
+  
+  // MEDIA QUERIES 
+// Only for IE10+ CSS styles go here 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .svg {
+        width: 100%;
+      }
+}
+  

@@ -1,0 +1,47 @@
+/*
+****************************** UBER MICH ********************************
+*/
+
+#uber-mich {
+    height: 100%;
+    width: 100vw;
+  
+    background: url('../img/md-webdesign_Michal_Durik.jpg') no-repeat;
+    background: {
+      size: cover;
+      attachment: scroll;
+      position: center center;
+    }
+  
+  
+    //overflow: auto;
+  
+    header {
+      background: transparent;
+      padding: 2em 0 1em 0;
+  
+      h1 {
+        font-family: $font-family-title;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-bg;
+      }
+    }
+  
+    p {
+      color: $color-bg;
+      padding: 0 .5em 1em;
+      text-align: justify;
+      font-size: 110%;
+  
+      @media screen and (min-width: 23.375em) {
+        font-size: 131%;
+      }
+    }
+  
+    // FOR PC
+    @media screen and (min-width: 65em) {
+      background-attachment: fixed;
+    }
+  
+  }

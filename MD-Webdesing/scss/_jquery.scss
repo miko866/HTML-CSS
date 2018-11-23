@@ -1,0 +1,26 @@
+/*
+* JQuery
+*/
+
+a.back-to-top {
+	display: none;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+    background: #27AE61 url("../img/up-arrow.svg") no-repeat center center;
+    background-size: cover;
+    border-radius: 30px;
+    opacity: .5;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    opacity: 1;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    transition: opacity .4s;
+}

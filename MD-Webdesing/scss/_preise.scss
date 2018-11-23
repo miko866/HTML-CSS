@@ -1,0 +1,34 @@
+/*
+****************************** PREISE ********************************
+*/
+
+#preise {
+    
+    background-color: $color-bg;
+    padding-bottom: 2em;
+  
+    header {
+      background: transparent;
+      text-align: center;
+      padding: 2em 0 1em;
+  
+      h1 {
+        font-family: $font-family-title;
+        text-transform: uppercase;
+        color: $color-main;
+      }
+    }
+  
+    p {
+      padding: 0 .5em 1em;
+      color: $color-main;
+      text-align: justify;
+      font-size: 110%;
+  
+      @media screen and (min-width: 23.375em) {
+        font-size: 131%;
+      }
+    }
+  
+  }
+  

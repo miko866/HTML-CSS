@@ -1,0 +1,121 @@
+// ------------- NAVIGATION -----------
+.btn-menu {
+    height: 1.5625rem;
+    width: 3.125rem;
+    position: absolute;
+    top: 3.125rem;
+    right: 1.125rem;
+    cursor: pointer;
+    z-index: 99;
+  
+    .btn-menu--line {
+      height: .25rem;
+      width: 2.5rem;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .btn-menu--line:before {
+      content: '';
+      height: .25rem;
+      width: 2.5rem;
+      background-color: #fff;
+      position: absolute;
+      margin-top: -0.625rem;
+    }
+    .btn-menu--line:after {
+      content: '';
+      height: .25rem;
+      width: 2.5rem;
+      background-color: #fff;
+      position: absolute;
+      margin-top: 0.625rem;
+    }
+  
+    .btn-menu--line:hover,
+    .btn-menu--line:hover:after,
+    .btn-menu--line:hover:before {
+      transition: all .3s ease-in-out;
+      background-color: $color-hover;
+    }
+  }
+  
+  .full-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($color-main, 1);
+    text-align: center;
+    z-index: 9999;
+    overflow: auto;
+  
+    .btn-menu--close {
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 600%;
+      cursor: pointer;
+      z-index: 99999;
+    }
+    .btn-menu--close::after {
+      content: '×'; /* UTF-8 symbol */
+    }
+    .btn-menu--close:hover,
+    .btn-menu--close:focus {
+      transition: all .3s ease-in-out;
+      color: $color-hover;
+    }
+  
+    .wrap {
+      height: 100vh;
+      align-items: center;
+      padding-top: 7em;
+      //overflow-y: scroll;
+    }
+  
+    li {
+      padding-bottom: 1em;
+      cursor: pointer;
+  
+      a {
+      font-family: $font-family-title;
+      font-size: 230%;
+      color: $color-bg;
+      text-transform: uppercase;
+      }  
+      a:hover,
+      a:focus {
+        transition: all .3s ease-in-out;
+        color: $color-hover;
+      }
+    }
+  
+  
+    .social-items {
+      padding-top: 2em;
+  
+      a {
+        padding-right: 1.5em;
+      }
+      a:last-child {
+        padding-right: 0;
+      }
+  
+      svg {
+        height: 5vh;
+        width: 20%;
+      }
+      a svg:hover path,
+      a svg:focus path {
+        transition: all .3s ease-in-out;
+        fill: $color-hover;
+      }
+    }
+  }
+  // END NAVIGATION

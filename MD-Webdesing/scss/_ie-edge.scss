@@ -1,0 +1,89 @@
+/*
+********************************** IE + EDGE (FUJ) *****************************
+*/
+
+@supports (-ms-ime-align: auto) {
+    /* Microsoft EdgeV13&14 CSS styles go here */
+    #home {
+      height: 25em;
+    }
+    
+    .shape {
+      height: 100%;
+      display: inline-block;
+      width: 49%;
+    }
+    
+    .bg-apple {
+      display: inline-block;
+      height: 100%;
+      width: 48%;
+      left: 50%;
+      top: -6em;
+    }
+    
+    #angebot header {
+      height: auto;
+    }
+    .angebot {
+      top: 0;
+    }
+  }
+  
+  @supports (-ms-accelerator: true) {
+     /* Microsoft EdgeV13 CSS styles go here */
+     #home {
+      height: 25em;
+    }
+    
+    .shape {
+      height: 100%;
+      display: inline-block;
+      width: 49%;
+    }
+    
+    .bg-apple {
+      display: inline-block;
+      height: 100%;
+      width: 48%;
+      left: 50%;
+      top: -6em;
+    }
+    
+    #angebot header {
+      height: auto;
+    }
+    .angebot {
+      top: 0;
+    }
+  }
+  
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10 & IE11 CSS styles go here */
+     #home {
+      height: 25em;
+    }
+    
+    .shape {
+      height: 100%;
+      display: inline-block;
+      width: 49%;
+    }
+    
+    .bg-apple {
+      display: inline-block;
+      height: 100%;
+      width: 48%;
+      left: 50%;
+      top: -6em;
+    }
+    
+    #angebot header {
+      height: auto;
+    }
+    .angebot {
+      top: 0;
+    }
+  }
+  
+  

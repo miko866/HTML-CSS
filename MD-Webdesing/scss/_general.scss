@@ -1,0 +1,123 @@
+// *************  GENERAL *************
+
+// Only for Program Websites - show Elements Container  
+/* * {
+    outline: 3px solid black; 
+} */
+
+// For Microsoft Devices - Resposive 
+@-ms-viewport {
+    width: device-width;
+  }
+  
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  // Okamžitá odozva pre mobilné zariadenia na TOUCH, zrušenie oneskorenia 300/ms 
+  -ms-touch-action: manipulation; /* IE10  */
+  touch-action: manipulation;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  // don't copy text
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  font: {
+      size:   $font-size;
+      family: $font-family-text-2;
+  }
+  
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  overflow-y: scroll;
+  //-webkit-overflow-scrolling: touch;
+  text-rendering: optimizelegibility;
+
+  @media screen and (min-width: 23.375em) {
+      font-size: 112%;
+    }
+  @media screen and (min-width: 25.875em) {
+    font-size: 120%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  // font-size: 0;  medzeri medzi obrazkamy odstrány
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+p {
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border: 0;
+}
+
+.container {
+  max-width: 73.75rem; // 1180px
+  margin: 0 auto;
+  padding: 0 .3rem 0 .3rem;
+}
+
+// add color for text markieren 
+::selection {
+  background: #ddd;
+  color: white;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #ddd;
+  color: white;
+  text-shadow: none;
+}
+
+// CLEAR FIX 
+.clear::before,
+.clear::after {
+  content: " ";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}

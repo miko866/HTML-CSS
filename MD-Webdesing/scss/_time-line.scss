@@ -1,0 +1,176 @@
+// TIME-LINE *********************************************************************************
+
+.timeline {
+    
+    overflow: hidden;
+  
+    header {
+    background-color: $color-bg;
+    font-family: $font-family-title;
+    color: $color-main;
+    text-align: center;
+    padding-top: 2em;
+    }
+  
+    p {
+      font-size: 110%;
+    }
+  }
+  
+  
+  .timeline ul {
+    padding: 3.125em 0;
+  }
+  
+  .timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: .375em;
+    margin: 0 auto;
+    padding-top: 3.125em ;
+    background: $color-base-2;
+  }
+  
+  .timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 1.875em;
+    height: 1.875em;
+    border-radius: 50%;
+    background: inherit;
+  }
+  
+  .timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 25.000em;
+    padding: .938em;
+    background: $color-base-2;
+  }
+  
+  .timeline ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: .438em;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  .timeline ul li:nth-child(odd) div {
+    left: 2.813em;
+  }
+  
+  .timeline ul li:nth-child(odd) div::before {
+    left: -.938em;
+    border-width: .500em 1em .500em 0;
+    border-color: transparent $color-base-2 transparent transparent;
+  }
+  
+  .timeline ul li:nth-child(even) div {
+    left: -27.438em;
+  }
+  
+  .timeline ul li:nth-child(even) div::before {
+    right: -.938em;
+    border-width: .500em 0 .500em 1em;
+    border-color: transparent transparent transparent $color-base-2;
+  }
+  
+  .timeline span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .500em;
+  
+    svg {
+      width: 15%;
+    }
+  
+    h5 {
+      display: inline-block;
+      padding-left: 1em;
+      vertical-align: text-bottom;
+      text-transform: uppercase;
+      font-size: 90%;    
+      color: $color-hover;
+    }
+  }
+  
+  /* EFFECTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .timeline ul li::after {
+    transition: background .5s ease-in-out;
+  }
+  
+  .timeline ul li.in-view::after {
+    background: #F45B69;
+  }
+  
+  .timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+  
+  .timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+  }
+  
+  .timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+  }
+  
+  .timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+  /* GENERAL MEDIA QUERIES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (max-width: 64.000em) {
+    .timeline ul li div {
+      width: 23em;
+    }
+  
+    .timeline ul li:nth-child(even) div {
+      left: -25.438em;
+    }
+  
+  }
+  
+  @media screen and (max-width: 56.250em) {
+    .timeline ul li div {
+      width: 15.625em;
+    }
+    .timeline ul li:nth-child(even) div {
+      left: -18.063em;
+      /*250+45-6*/
+    }
+  }
+  
+  @media screen and (max-width: 47.938em) {
+    .timeline ul li {
+      margin-left: 1.250em;
+    }
+    .timeline ul li div {
+      width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-child(even) div {
+      left: 2.813em;
+    }
+    .timeline ul li:nth-child(even) div::before {
+      left: -.938em;
+      border-width: .500em 1em .500em 0;
+      border-color: transparent $color-base-2 transparent transparent;
+    }
+
+    .timeline span h5 {
+        font-size: 70%;
+    }
+  }
+  
+  // END TIME-LINE **********************************************************************************

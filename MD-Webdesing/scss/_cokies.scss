@@ -1,0 +1,166 @@
+/*
+****************************** COOKIES ********************************
+*/
+
+.cookies-banner {
+    display: none;
+    background: $color-bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 999999;
+    text-align: center;
+    padding-top: .5em;
+  
+    .banner-btn {
+      background: #ccc;
+      color: #333;
+      text-decoration: none;
+      padding: .213em .525em;
+      border-radius: 3px;
+      display: inline-block;
+      border: 1px solid #aaa;
+      margin-left: .5em;
+    }
+  
+    p {
+      font-size: 80%;
+    }
+  
+    a {
+      padding-left: .5em;
+      color: $color-marked;
+      text-transform: uppercase;
+    }
+  }
+  
+  // COOKIES PAGE
+  
+  .cookies {
+    padding: 2em .5em;
+  
+    h1 {
+      font-family: $font-family-title;
+      color: $color-main;
+      text-align: center;
+      padding-bottom: 1em;
+    }
+  
+    p {
+      font-size: 120%;
+      text-align: justify;
+      padding-bottom: 1em;
+
+      .hover:hover {
+        color: $color-hover;
+      }
+    }
+  
+    a {
+      text-decoration: underline;
+      color: $color-marked;
+    }
+  
+    // BTN-Back
+    
+    @-webkit-keyframes btn-back {
+      16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+      }
+      33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+      }
+      49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+      }
+      66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+      }
+      83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+      }
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+    @keyframes btn-back {
+      16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+      }
+      33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+      }
+      49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+      }
+      66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+      }
+      83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+      }
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+    .btn-back {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px transparent;
+      position: relative;
+      padding-right: 2.2em;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      cursor: pointer;
+  
+      p {
+        font-family: $font-family-title;
+        text-transform: uppercase;
+        padding-left: 1.5em;
+        cursor: pointer;
+  
+        a {
+          text-decoration: none;
+          transition: .3s all ease-in-out;
+        }
+  
+        a:hover {
+          color: $color-hover;
+        }
+      }
+    }
+    .btn-back:before {
+      content: "< <";
+      position: absolute;
+      font-family: FontAwesome;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      color: $color-marked;
+    }
+    .btn-back:hover:before, .btn-back:focus:before, .btn-back:active:before {
+      -webkit-animation-name: btn-back;
+      animation-name: btn-back;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      color: $color-hover;
+    }
+  }

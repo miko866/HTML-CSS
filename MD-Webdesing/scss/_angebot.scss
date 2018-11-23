@@ -1,0 +1,210 @@
+/*
+****************************** ANGEBOT ********************************
+*/
+
+#angebot {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    background-color: $color-main-2;
+    height: 120vh;
+    padding-top: 2em;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+  
+    @media screen and (min-width: 47.813em) {
+      height: 100%;
+      padding-bottom: 1em;
+    }
+  
+  
+    /* Landscape */
+    /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+      height: 100%;
+    }
+    /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+    @media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) { 
+      height: 100%;
+    }
+    /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+    @media only screen 
+    and (min-device-width: 414px) 
+    and (max-device-width: 736px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) { 
+      height: 100%;
+    }
+    /* ----------- iPhone X ----------- */
+    @media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 812px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) { 
+      height: 100%;
+    }
+    /* ----------- Galaxy S4, S5 and Note 3 ----------- */
+    @media screen 
+    and (device-width: 320px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 3) 
+    and (orientation: landscape) {
+      height: 100%;
+    }
+    /* ----------- Galaxy S6 ----------- */
+    @media screen 
+    and (device-width: 360px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 4) 
+    and (orientation: landscape) {
+      height: 100%;
+    }
+    /* ----------- Google Pixel ----------- */
+    @media screen 
+    and (device-width: 360px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 3) 
+    and (orientation: landscape) {
+      height: 100%;
+    }
+  
+  
+    h1 {
+      font-family: $font-family-title;
+      color: $color-base-2;
+      text-align: center;
+    }
+  
+    p {
+      padding: 2em .5em 0 .5em;
+      font-size: 128%;
+      text-align: justify;
+      color: $color-base-2;
+    }
+  
+    img {
+      transform: rotate(45deg);
+      position: relative;
+      left: 6em;
+      top: 2em;
+      z-index: -2;
+  
+      @media screen and (min-width: 31.250em) {
+          max-width: 70%;
+          left: 10em;
+        }
+  
+      @media screen and (min-width: 47.813em) {
+        max-width: 50%;
+        left: 27em;
+        top: 1em;
+      }
+  
+      /* Landscape */
+      /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+      @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 667px) 
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: landscape) { 
+        max-width: 40%;
+        top: 0;
+      }
+      /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+      @media only screen 
+      and (min-device-width: 414px) 
+      and (max-device-width: 736px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: landscape) { 
+        max-width: 40%;
+        top: 0;
+      }
+      /* ----------- iPhone X ----------- */
+      @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 812px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: landscape) { 
+        max-width: 40%;
+        top: 0;
+      }
+      /* ----------- Galaxy S4, S5 and Note 3 ----------- */
+      @media screen 
+      and (device-width: 320px) 
+      and (device-height: 640px) 
+      and (-webkit-device-pixel-ratio: 3) 
+      and (orientation: landscape) {
+        max-width: 40%;
+        top: 0;
+    }
+  
+    }
+  
+    // FOR PC
+    @media screen and (min-width: 65em) {
+      -webkit-clip-path: polygon(-1% 0, 100% 0, 100% 100%);
+      clip-path: polygon(-1% 0, 100% 0, 100% 100%);
+  
+      p:nth-child(1) {
+        width: 46%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 4em;
+      }
+      p:nth-child(2) {
+        width: 46%;
+        margin-left: auto;
+        padding-left: 2em;
+      }
+  
+      img {
+        max-width: 30%;
+        left: 55rem;
+      }
+    }
+  }
+  
+  // COVER-IMAGE
+  .cover-img {
+    display: none;
+  
+    // FOR PC
+    @media screen and (min-width: 65em) {
+      display: block;
+  
+      position: absolute;
+      top: 41rem;
+      left: 0;
+      background-color: $color-bg;
+      z-index: -1;
+  
+      .img-ipad {
+        text-align: center;
+        height: 100vh;
+        position: relative;
+        top: 16rem;
+        left: -12rem;
+        padding-right: 9rem;
+      }
+  
+      img {
+        max-width: 25%;
+      }
+    }
+  
+    @media screen and (min-width: 95em) {
+      width: 100%;
+  
+      .img-ipad {
+        text-align: left;
+      }
+    }
+  }

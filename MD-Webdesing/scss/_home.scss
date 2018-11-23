@@ -1,0 +1,146 @@
+/*
+****************************** HOME ********************************
+*/
+
+header {
+    background-color: $color-main-2;
+
+    // For PC
+    @media screen and (min-width: 90em) {
+      height: 85%;
+    }
+    
+}
+
+//------------------- Start SHAPE ------------------------------ 
+.shape {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  background: $color-main;
+  height: 110vh;
+  position: relative;
+  z-index: 2;
+
+  @media screen and (min-width: 35.500em) {
+    height: 100%;
+  }
+
+  @media screen and (min-width: 47.813em) {
+    padding-bottom: 3.5em;
+  }
+
+  // For PC
+  @media screen and (min-width: 65em) {
+
+    .content-shape {
+      padding-top: 3em;
+    }
+
+    -webkit-clip-path: polygon(0 0, 55% 0, 75% 40%, 0% 100%);
+    clip-path: polygon(0 0, 55% 0, 75% 40%, 0% 100%);
+    height: 35em;
+    max-width: 90%;
+  }
+
+}
+
+.shape__social-logo {
+    text-align: center;
+
+    @media screen and (min-width: 47.813em) {
+      display: inline-block;
+      width: 48%;
+      vertical-align: top;
+    }
+
+    .logo {
+      max-width: 70%;
+      padding: 2em 0 1em 2em;
+
+      @media screen and (min-width: 26.875em) {
+        svg {
+          max-width: 80%;
+        }
+      }
+
+      @media screen and (min-width: 47.813em) {
+        max-width: 100%;
+        padding: 1.5em 0;
+        text-align: center;
+
+        svg {
+          max-width: 60%;
+        }
+      }
+    }
+
+    .socials {
+
+      a:first-child {
+        padding-right: 10%;
+      }
+
+      svg {
+        width: 13%;
+        height: 20%;
+      }
+
+      a svg:hover path,
+      a svg:focus path {
+        transition: all .3s ease-in-out;
+        fill: $color-hover;
+      }
+      display: none;
+
+      @media screen and (min-width: 47.813em) {
+        display: inline-block;
+        text-align: center;
+      }
+
+    }
+
+    // For PC
+    @media screen and (min-width: 65em) {
+      max-width: 28%;
+      padding-top: 2em;
+    }
+}
+
+.shape__intro-text {
+  padding: 2em .7em;
+  text-transform: uppercase;
+  font-family: $font-family-title;
+  font-size: 114%;
+
+  h4 {
+    color: $color-hover;
+    margin-bottom: 0;
+  }
+  h1 {
+    color: $color-bg;
+    line-height: 1.5em;
+
+    @media screen and (min-width: 47.813em) {
+      line-height: 1.2em;
+    }
+  }
+  span h1 {
+    color: $color-marked;
+  }
+
+  @media screen and (min-width: 47.813em) {
+    display: inline-block;
+    width: 50%;
+    padding: 3em 2em 0 0;
+  }
+
+  // FOR PC
+  @media screen and (min-width: 65em) {
+    vertical-align: bottom;
+    font-size: 130%;
+
+    h4 {
+      font-size: 70%;
+    }
+  }
+}

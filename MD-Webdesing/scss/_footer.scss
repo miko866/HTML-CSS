@@ -1,0 +1,22 @@
+/*
+****************************** FOOTER ********************************
+*/
+
+footer {
+    padding: 1em 0;
+    text-align: center;
+  
+    h6 {
+      padding: .5em;
+      font-family: $font-family-title;
+    }
+  
+    p {
+      padding: .5em;
+      font-size: 70%;
+  
+      a {
+        text-decoration: underline;
+      }
+    }
+  }

@@ -1,0 +1,74 @@
+// ANGEBOT class
+
+.angebot {
+    background-color: $color-bg;
+    position: relative;
+    top: -8em;
+    padding-bottom: 8em;
+  
+    .content {
+      position: relative;
+      top: 7rem;
+    }
+  }
+  
+  .angebot-graf {
+  
+    width: 100vw;
+    // FOR PC
+    @media screen and (min-width: 65em) {
+      width: 100%;
+    }
+  
+  
+    svg {
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    a {
+      color: $color-marked;
+    }
+    a:hover,
+    a:focus {
+      transition: .3s all ease-in-out;
+      color: $color-hover;
+    }
+  
+    p {
+      font-size: 118%;
+      text-align: justify;
+      padding: 1em .5em 2.5em;
+  
+      // FOR PC
+      @media screen and (min-width: 65em) {
+        padding: 1em 1.5em 2.5em;
+      } 
+  
+    }
+  
+    p span {
+      color: $color-marked;
+    }
+  
+    @media screen and (min-width: 47.813em) {
+  
+      padding-top: 3em;
+  
+      .angebot-graf--part {
+        display: inline-block;
+        width: 31%;
+        vertical-align: top;
+      }
+    }
+  }
+  
+  // FOR PC
+  @media screen and (min-width: 65em) {
+    .angebot {
+      top: -13em;
+    }
+  }
+

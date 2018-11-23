@@ -1,0 +1,55 @@
+/*
+****************************** KONTAKT ********************************
+*/
+
+#kontakt {
+    width: 100vw;
+  
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+      ),
+      url('../img/map.png') no-repeat;
+    background: {
+      size: cover;
+      attachment: scroll;
+      position: center center;
+    }
+  
+    overflow: auto;
+    padding-bottom: 2em;
+  
+    header {
+      background: transparent;
+      text-align: center;
+      padding: 2em 0 1em;
+  
+      h1 {
+        font-family: $font-family-title;
+        text-transform: uppercase;
+        color: $color-base-2;
+      }
+  
+    }
+    p {
+      padding: 0 .5em 1em;
+      color: $color-base-2;
+      text-align: center;
+      font-size: 110%;
+  
+      @media screen and (min-width: 47.813em) {
+        font-size: 120%;
+      }
+  
+      a {
+        color: $color-marked;
+        cursor: pointer;
+        transition: .3s all ease-in-out;
+      }
+      a:hover,
+      a:focus {
+        color: $color-hover;
+      }
+    }
+  
+  }
